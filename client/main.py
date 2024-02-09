@@ -112,44 +112,6 @@ def main():
         #     print(i, "decrypted[i]", decrypted[i])
     print('Final time', time.time()-START_TIME)
 
-
-
-
-# def main1():
-
-#     KEY_PATH = "/root/src/keyset/depth3/"
-#     x = np.array([np.float32(0.1) for _ in range(3*112*112)])
-#     x = x.reshape([1,3,112,112])
-#     ort_sess = ort.InferenceSession('/root/src/model/r18_128.onnx')
-#     outputs = ort_sess.run(None, {'input': x})
-#     outputs = outputs[0][0]
-#     print("outputs[:10]", outputs[:10])
-
-
-#     encrypt = lib.encrypt
-#     encrypt.argtypes = [ctypes.POINTER(ctypes.c_float), ctypes.c_int, ctypes.c_char_p,ctypes.c_int]
-   
-#     encrypt.restype = ctypes.POINTER(ctypes.c_ubyte * 131419)  # 여기에서는 16을 반환하는 예제로 가정
-    
-#     c_float_array = outputs.ctypes.data_as(ctypes.POINTER(ctypes.c_float))
-#     c_array_length = ctypes.c_int(len(outputs))
-#     C_logN = ctypes.c_int(11)
-#     c_string = ctypes.c_char_p(KEY_PATH.encode('utf-8'))
-
-#     result = encrypt(c_float_array, c_array_length, c_string, C_logN).contents
-   
-    # byte_slice = bytes(result[:])
-    # print(type(result))
-
-    # c_float_array = result.ctypes.data_as(ctypes.POINTER(ctypes.c_ubyte * 131419))
-    # decrypt = lib.decrypt
-    # decrypt.argtypes = [ctypes.POINTER(ctypes.c_ubyte), ctypes.c_int, ctypes.c_char_p,ctypes.c_int]
-    # output = decrypt(result, 131419, c_string, 11)
-    # print(type(output))
-
-      
- 
-
 if __name__ == "__main__":
     main()
 
