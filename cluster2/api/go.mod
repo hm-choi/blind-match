@@ -1,4 +1,4 @@
-module github.com/hm-choi/blind_api
+module github.com/blind_match/blind_api
 
 go 1.21.4
 
