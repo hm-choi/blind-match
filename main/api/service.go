@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/blind_match/blind_match"
 	"github.com/gin-gonic/gin"
-	"github.com/hmchoi/blind_auth"
 	"github.com/tuneinsight/lattigo/v5/core/rlwe"
 	"github.com/tuneinsight/lattigo/v5/he/hefloat"
 )
@@ -50,15 +50,15 @@ func ObjectMapper(c *gin.Context) RequestBody {
 
 func DoReq(url string, data *bytes.Buffer) []byte {
 	resp, err := http.Post(url, "application/json", data)
-	blind_auth.ReturnErr(err)
+	blind_match.ReturnErr(err)
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	blind_auth.ReturnErr(err)
+	blind_match.ReturnErr(err)
 
 	return body
 }
 
-func Sent2Clusters(urls map[int]string, o *blind_auth.ObjectSet, params hefloat.Parameters, input_b []byte, CLUSTER_NUM int) []byte {
+func Sent2Clusters(urls map[int]string, o *blind_match.ObjectSet, params hefloat.Parameters, input_b []byte, CLUSTER_NUM int) []byte {
 	var wg sync.WaitGroup
 	queue := make(chan Resp, CLUSTER_NUM)
 	var results []Resp
@@ -76,7 +76,7 @@ func Sent2Clusters(urls map[int]string, o *blind_auth.ObjectSet, params hefloat.
 			resJson := Response{}
 			json.Unmarshal(respBody, &resJson)
 			result_b, err := base64.StdEncoding.DecodeString(resJson.Data)
-			blind_auth.ReturnErr(err)
+			blind_match.ReturnErr(err)
 			ctxt := &rlwe.Ciphertext{}
 			ctxt.UnmarshalBinary(result_b)
 			resp := &Resp{}
@@ -100,6 +100,6 @@ func Sent2Clusters(urls map[int]string, o *blind_auth.ObjectSet, params hefloat.
 		}
 	}
 	result_b, err := result.MarshalBinary()
-	blind_auth.ReturnErr(err)
+	blind_match.ReturnErr(err)
 	return result_b
 }

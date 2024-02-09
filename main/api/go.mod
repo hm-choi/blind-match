@@ -1,8 +1,8 @@
-module github.com/hmchoi/api
+module github.com/blind_match/api
 
 go 1.21.5
 
-replace github.com/hmchoi/api => ../api
+replace github.com/blind_match/api => ../api
 
 require github.com/gin-gonic/gin v1.9.1
 

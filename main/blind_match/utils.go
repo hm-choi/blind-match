@@ -1,4 +1,4 @@
-package blind_auth
+package blind_match
 
 import (
 	"bufio"
