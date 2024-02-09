@@ -3,9 +3,15 @@ package main
 import (
 	"encoding/json"
 
+<<<<<<< HEAD
 	"github.com/blind_match/api"
 	"github.com/blind_match/blind_match"
 	"github.com/gin-gonic/gin"
+=======
+	"github.com/gin-gonic/gin"
+	"github.com/hmchoi/api"
+	"github.com/hmchoi/blind_auth"
+>>>>>>> 8576893 (Develop (#1))
 )
 
 func main() {
