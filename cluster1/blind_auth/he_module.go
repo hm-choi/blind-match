@@ -79,6 +79,22 @@ func GetKeyPair(params hefloat.Parameters, path string, logN int) *ObjectSet {
 	return obs
 }
 
+func GetCtxtDbs(path string, VEC_SIZE int, LOG_NUM_CTXT int, NUM_INPUT_CTXT int) [][]*rlwe.Ciphertext {
+	ctxt_dbs := make([][]*rlwe.Ciphertext, VEC_SIZE)
+	for i := 0; i < VEC_SIZE; i++ {
+		ctxt_dbs[i] = make([]*rlwe.Ciphertext, NUM_INPUT_CTXT)
+		for j := 0; j < NUM_INPUT_CTXT; j++ {
+			ctxt := &rlwe.Ciphertext{}
+			path_ := path + "/" + strconv.Itoa(LOG_NUM_CTXT) + "/" + strconv.Itoa(i) + "_" + strconv.Itoa(j)
+			b, err := os.ReadFile(path_)
+			ReturnErr(err)
+			ctxt.UnmarshalBinary(b)
+			ctxt_dbs[i][j] = ctxt
+		}
+	}
+	return ctxt_dbs
+}
+
 func Input_Expansion_Param(n int, m int) int {
 	result := 1
 	if (n/m)%2 == 0 {
