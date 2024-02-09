@@ -30,8 +30,8 @@ func main() {
 	// CTXT_PATH_128 is the path that the saved ciphertext with feature vector size 128 in the server
 	// CTXT_PATH_64 is the path that the saved ciphertext with feature vector size 64 in the server
 	KEY_PATH := "/root/src/blind_auth_new/key/depth3"
-	CTXT_PATH_128 := "/root/src/blind_auth_new/ctxt/cluster1/r18_feat128_ms1mv3/"
-	CTXT_PATH_64 := "/root/src/blind_auth_new/ctxt/cluster1/r18_feat64_ms1mv3/"
+	CTXT_PATH_128 := "/root/src/blind_auth_new/ctxt/cluster3/r18_feat128_ms1mv3/"
+	CTXT_PATH_64 := "/root/src/blind_auth_new/ctxt/cluster3/r18_feat64_ms1mv3/"
 
 	params := blind_auth.Blind_Auth_Param(LogN)
 	o := blind_auth.GetKeyPair(params, KEY_PATH, LogN)
