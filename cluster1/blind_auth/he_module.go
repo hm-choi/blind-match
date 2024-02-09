@@ -2,7 +2,6 @@ package blind_auth
 
 import (
 	"fmt"
-	"math"
 	"os"
 	"strconv"
 
@@ -80,6 +79,14 @@ func GetKeyPair(params hefloat.Parameters, path string, logN int) *ObjectSet {
 	return obs
 }
 
+func Input_Expansion_Param(n int, m int) int {
+	result := 1
+	if (n/m)%2 == 0 {
+		result = -1
+	}
+	return result
+}
+
 func HE_Cossim(params hefloat.Parameters, o *ObjectSet, input_ct_b []byte, NUM_CTXT int, LOG_NUM_CTXT int, LOG_FV_SIZE int, masks [][]float64, ctxt_dbs [][]*rlwe.Ciphertext) []byte {
 	NUM_INPUT_CTXT := PowerOfTwo(LOG_NUM_CTXT)
 	FV_SIZE := PowerOfTwo(LOG_FV_SIZE)
@@ -90,8 +97,6 @@ func HE_Cossim(params hefloat.Parameters, o *ObjectSet, input_ct_b []byte, NUM_C
 			test[i] = 1.0
 		}
 	}
-	// mask := hefloat.NewPlaintext(params, 1)
-	// o.Ecd.Encode(test, mask)
 	input_ctxt := &rlwe.Ciphertext{}
 	input_ctxt.UnmarshalBinary(input_ct_b)
 
@@ -101,7 +106,7 @@ func HE_Cossim(params hefloat.Parameters, o *ObjectSet, input_ct_b []byte, NUM_C
 		o.Eval.Rescale(c, c)
 		ReturnErr(err)
 		for j := 0; j < LOG_NUM_CTXT; j++ {
-			tmp, _ := o.Eval.RotateNew(c, Tmp_func(i, PowerOfTwo(j))*PowerOfTwo(j+LOG_FV_SIZE-LOG_NUM_CTXT))
+			tmp, _ := o.Eval.RotateNew(c, Input_Expansion_Param(i, PowerOfTwo(j))*PowerOfTwo(j+LOG_FV_SIZE-LOG_NUM_CTXT))
 			o.Eval.Add(c, tmp, c)
 		}
 		input_ctxts[i] = c
