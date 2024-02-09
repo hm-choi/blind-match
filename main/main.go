@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 
+	"github.com/blind_match/api"
+	"github.com/blind_match/blind_match"
 	"github.com/gin-gonic/gin"
-	"github.com/hmchoi/api"
-	"github.com/hmchoi/blind_auth"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 		1: "http://223.130.133.129:18888/send-ctxt/",
 		2: "http://175.45.204.179:18888/send-ctxt/",
 	}
-	params, o, _ := blind_auth.SetTestParams(KEY_PATH, LogN, FV_SIZE, NUM_CTXT)
+	params, o, _ := blind_match.SetTestParams(KEY_PATH, LogN, FV_SIZE, NUM_CTXT)
 
 	router := gin.Default()
 	router.Use(api.CORSMiddleware())
@@ -31,7 +31,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -45,7 +45,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -58,7 +58,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -72,7 +72,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -86,7 +86,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -100,7 +100,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -114,7 +114,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -127,7 +127,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -140,7 +140,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -153,7 +153,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -166,7 +166,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -180,7 +180,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
@@ -194,7 +194,7 @@ func main() {
 
 		var body api.RequestBody
 		err := json.NewDecoder(c.Request.Body).Decode(&body)
-		blind_auth.ReturnErr(err)
+		blind_match.ReturnErr(err)
 		result_b := api.Sent2Clusters(tmp_urls, o, params, body.Ctxt, CLUSTER_NUM)
 		api.ReturnPostAPI(c, result_b, 1)
 	})
