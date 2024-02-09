@@ -1,6 +1,6 @@
 # blind-match
 ## Blind-Match: Efficient Homomorphic Encryption-Based 1:N Matching for Privacy-Preserving Biometric Identification
-![Overview of Blind-Match](images/Blind-Match.pdf)
+![Overview of Blind-Match](images/Blind-Match.png)
 
 ## 1. Server Setting
 - In this test, there are five servers are used.
