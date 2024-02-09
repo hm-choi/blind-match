@@ -1,8 +1,8 @@
-module github.com/hmchoi/blind_auth
+module github.com/blind_match/blind_match
 
 go 1.21.5
 
-replace github.com/hmchoi/blind_auth => ../blind_auth/
+replace github.com/blind_match/blind_match => ../blind_match/
 
 require (
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
