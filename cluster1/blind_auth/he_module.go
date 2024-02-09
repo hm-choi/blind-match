@@ -1,6 +1,11 @@
 package blind_auth
 
 import (
+	"fmt"
+	"math"
+	"os"
+	"strconv"
+
 	"github.com/tuneinsight/lattigo/v5/core/rlwe"
 	"github.com/tuneinsight/lattigo/v5/he/hefloat"
 )
