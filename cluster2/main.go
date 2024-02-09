@@ -5,15 +5,9 @@ import (
 	"fmt"
 	"time"
 
-<<<<<<< HEAD
-	"github.com/gin-gonic/gin"
-	api "github.com/hm-choi/blind_api"
-	"github.com/hm-choi/blind_auth"
-=======
 	api "github.com/blind_match/blind_api"
 	"github.com/blind_match/blind_match"
 	"github.com/gin-gonic/gin"
->>>>>>> develop
 )
 
 type Response struct {
