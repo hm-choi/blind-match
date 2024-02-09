@@ -9,7 +9,7 @@ import time
 import asyncio
 import aiohttp
 
-lib = ctypes.cdll.LoadLibrary('blind_match_client.so')
+lib = ctypes.cdll.LoadLibrary('./blind_match_client.so')
 async def fetch(session, url, requestBody):
     async with session.post(url, json=requestBody) as response:
         return await response.text()
@@ -38,7 +38,7 @@ VEC_SIZE = FV_SIZE/NUM_CTXT
 R_VEC_SIZE = R_FV_SIZE / NUM_CTXT
 print('R_FV_SIZE', R_FV_SIZE, 'R_VEC_SIZE', R_VEC_SIZE)
 URLs = ['http://223.130.132.70:18888/send-ctxt/face/' + str(R_FV_SIZE) + '/13-' + str(LOG_NUM_CTXT)]
-URLs = ['http://175.45.195.254:18888/send-ctxt/face/' + str(R_FV_SIZE) + '/13-' + str(LOG_NUM_CTXT)]
+# URLs = ['http://175.45.195.254:18888/send-ctxt/face/' + str(R_FV_SIZE) + '/13-' + str(LOG_NUM_CTXT)]
 # URLs = ['http://223.130.132.70:18888/send-ctxt/legacy/64']
 
 NUM_SLOTS = 2048
