@@ -26,7 +26,7 @@ import pandas as pd
 
 ##############################################################
 def _save_snapshot(self, epoch, name):
-    path=f"/media/data2/jiwon/{name}.pt",
+    path=f"Write down your model path",
     snapshot = {
         "MODEL_STATE": self.model.state_dict(), #module
         "EPOCHS_RUN": epoch,
@@ -211,8 +211,8 @@ def test_folders(args):
     - AUC
     """
     print("TRAIN UPON SETTING", args.name)
-    data_path1 = '/media/data2/jiwon/finger/data/PolyU_Dataset/processed_contactless_2d_fingerprint_images/first_session/'
-    data_path2 = '/media/data2/jiwon/finger/data/PolyU_Dataset/processed_contactless_2d_fingerprint_images/second_session/'
+    data_path1 = 'The path of the first session of polyU dataset'
+    data_path2 = 'The path of the second session of polyU dataset'
     # R, L = args.resize, args.resize
     ##############################################################
     session1 = []
