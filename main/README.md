@@ -1,6 +1,6 @@
 # Main Server
 
-The main server is used for acting the rule of the main node.
+The main server is used for acting the role of the main node.
 - The following procedures are supported in this scenario. 
   - a. When receives the client's HTTP(POST) requests, then it sends the requests to each cluster server.
   - b. It receives each response from clusters and then combines each ciphertext in the cluster's HTTP response body as a ciphertext. 
