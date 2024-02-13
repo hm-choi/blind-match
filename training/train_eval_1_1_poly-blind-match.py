@@ -337,7 +337,7 @@ if __name__ == '__main__':
     parser.add_argument('--resize', default=224, type=int)
     parser.add_argument('--batch', default=256, type=int)
     parser.add_argument('--epochs', default=300, type=int)
-    parser.add_argument('--lr', default=1e-3, type=float) # 1e-3으로 바꾸기!!!
+    parser.add_argument('--lr', default=1e-3, type=float)
     parser.add_argument('--train', default='11', type=str)
     args = parser.parse_args()
     

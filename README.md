@@ -1,4 +1,4 @@
-# blind-match
+# Blind-Match
 ## Blind-Match: Efficient Homomorphic Encryption-Based 1:N Matching for Privacy-Preserving Biometric Identification
 ![Overview of Blind-Match](images/Blind-Match.png)
 
