@@ -44,7 +44,17 @@
 
 
 (2) Face Datasets
-### TBD
+- MS1Mv3 Datasets
+  - It consists of 93K identities and 5.1M images. 
+  - It is used for training the ResNet-18 based CNN model.
+- LFW Datasets
+  - In this dataset, 13,233 images of 5,749 people were detected. It is used for evaluation.
+- CFP-FP Datasets
+  - It defines 3500 positive and 3500 negative image pairs. It is used for evaluation.
+- AgeDB Datasets
+  - It contains 16,488 grayscale images of celebrities from 568 subjects aged 1-101 years. It is used for evaluation.
+- IJB-C Datasets
+  - It contains 138,000 face images. It is used for evaluation.
 
 ###  3.2 Data Preprocessing
 We provide the preprocessed fingerprint dataset (FVC 2002 DB1).
