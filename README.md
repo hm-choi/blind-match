@@ -58,6 +58,7 @@
 
 ###  3.2 Data Preprocessing
 We provide the preprocessed fingerprint dataset (FVC 2002 DB1).
+It can be obtained by contacting the website: https://figshare.com/articles/dataset/FVC2002_DB1_zip/25211777
 
 ### 3.3 Model Training
 - We use ResNet-18-based CNN architecture for feature vector extraction.
