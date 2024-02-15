@@ -6,7 +6,7 @@ import PIL.Image as Image
 import warnings
 import argparse, sys, os
 from tqdm import tqdm
-from blindAuth import *
+from blindMuth import *
 from utils import *
 warnings.filterwarnings('ignore')
 
