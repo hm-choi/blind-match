@@ -8,7 +8,7 @@ import PIL.Image as Image
 import cv2
 import math
 
-from blindAuth import *
+from blindMatch import *
 
 # os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 from os import path
