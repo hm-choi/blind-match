@@ -2,6 +2,16 @@
 ## Blind-Match: Efficient Homomorphic Encryption-Based 1:N Matching for Privacy-Preserving Biometric Identification
 ![Overview of Blind-Match](images/Blind-Match.png)
 
+Official repository for **Blind-Match: Efficient Homomorphic Encryption-Based 1:N Matching for Privacy-Preserving Biometric Identification(CIKM'24)**
+by Hyunmin Choi<sup>1,2</sup>, Jiwon Kim<sup>2</sup>, Chiyoung Song<sup>1</sup>, Simon S. Woo<sup>2** </sup>, and Hyoungshick Kim<sup>2** </sup>.
+
+<sup>1</sup> NAVER Cloud, South Korea
+<sup>2</sup> Sungkyunkwan University, South Korea
+
+** Corresponding author
+
+You can read the paper here: [ArXiv Link]((https://arxiv.org/abs/2408.06167)) [ACM Libraries](https://dl.acm.org/doi/10.1145/3627673.3680017)
+
 ## 1. Server Setting
 - In this test, there are five servers are used.
   - A client, a main server, and three cluster servers.
@@ -93,3 +103,9 @@ It can be obtained by contacting the website: https://figshare.com/articles/data
 
 ### How to use
 See README.md files in each directory for guides.
+
+## Publications
+Blind-Match: Efficient Homomorphic Encryption-Based 1:N Matching for Privacy-Preserving Biometric Identification, CIKM'24, Applied Research Track
+
+## License
+This is available for the non-commercial purpose only. 
