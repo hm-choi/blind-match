@@ -12,7 +12,7 @@ Hyunmin Choi<sup>1,2</sup>, Jiwon Kim<sup>2</sup>, Chiyoung Song<sup>1</sup>, Si
 ** Corresponding author
 
 You can read the paper here: 
-[ArXiv Link]((https://arxiv.org/abs/2408.06167)) 
+[ArXiv Link](https://arxiv.org/abs/2408.06167))
 [ACM Libraries](https://dl.acm.org/doi/10.1145/3627673.3680017)
 
 ## 1. Server Setting
